@@ -1,0 +1,50 @@
+.part{
+    margin-bottom: 30px;
+}
+p.subtitle{
+    margin-bottom: -20px!important;
+}
+h3.subtitle{
+    margin-bottom: 40px!important;
+}
+
+h1.is-3{
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    margin-top: 30px!important;
+}
+.get-up{
+    margin-bottom: -50px!important;
+}
+
+ul.action-list>li::marker{
+    content: '> ';
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+ul.action-list>li{
+    margin-left: 20px;
+}
+/* The sidebar menu */
+.menu {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #ffffff; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 65px;
+  }
+
+.blue{
+    background-color: rgb(222, 222, 255);
+}
+.yellow{
+    background-color: rgb(254, 255, 197);
+}
+.red{
+    background-color: rgb(255, 214, 204);
+}

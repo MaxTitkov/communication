@@ -71,7 +71,8 @@ ul.action-list>li{
     background-color: rgb(255, 214, 204);
 }
 .mark{
-    background-color: rgb(255, 236, 126);
+    /* background-color: rgb(255, 252, 235); */
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 992px) {

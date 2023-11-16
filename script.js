@@ -6,6 +6,7 @@ const menuItemsArray = Array.from(menuItems);
 const sections = document.querySelectorAll('#scrollItem');
 const sectionsArray = Array.from(sections);
 
+const isMobile = window.matchMedia("(max-width: 600px)").matches;
 const burger = document.querySelector('#burger');
 const menu = document.querySelector('#sideMenu');
 
@@ -28,6 +29,15 @@ menuItems.forEach((menuItem) => {
 window.addEventListener('scroll', () => {
     // Get the current scroll position
     const scrollPosition = window.scrollY;
+
+    if(!isMobile){
+        if(scrollPosition >= 4655){
+            menu.scrollTo({ top: menu.scrollHeight, behavior: "smooth" });
+        }
+        if(scrollPosition <= 2667){
+            menu.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }
 
   
     // Determine the active section
@@ -61,7 +71,6 @@ window.addEventListener('scroll', () => {
         })
 
         if(activeMenuItemIndex === menuItemsArray.length - 3){
-            console.log(menuItemsArray[activeMenuItemIndex+1])
             menuItemsArray[activeMenuItemIndex+1].classList.add('is-active');
         }
 
@@ -69,7 +78,6 @@ window.addEventListener('scroll', () => {
     });
   });
 
-const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
 const preventScroll = (e) => {
   e.preventDefault();

@@ -48,3 +48,9 @@ ul.action-list>li{
 .red{
     background-color: rgb(255, 214, 204);
 }
+
+@media screen and (max-width: 992px) {
+    .menu {
+      display: none!important;
+    }
+  }

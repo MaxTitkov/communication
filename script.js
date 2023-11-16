@@ -6,18 +6,24 @@ const menuItemsArray = Array.from(menuItems);
 const sections = document.querySelectorAll('#scrollItem');
 const sectionsArray = Array.from(sections);
 
+const burger = document.querySelector('#burger');
+const menu = document.querySelector('#sideMenu');
+
 menuItems.forEach((menuItem) => {
 
     menuItem.addEventListener('click', () => {
         sections.forEach((section) => {
             if(menuItem.innerText.toLowerCase() === section.innerText.toLowerCase()){
                 section.scrollIntoView({ block: "start", behavior: "smooth" });
+
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+                menu.classList.toggle('is-hidden-mobile');
             }
         })
     })
 
 })
-
 // Add scroll event listener
 window.addEventListener('scroll', () => {
     // Get the current scroll position
@@ -60,8 +66,38 @@ window.addEventListener('scroll', () => {
         }
 
     }
-
     });
   });
 
+const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+const preventScroll = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}
+
+function disableScroll() {
+    document.body.addEventListener('wheel', preventScroll, {passive: false});
+}
+
+function enableScroll() {
+    document.body.removeEventListener('wheel', preventScroll, {passive: false});
+}
+
+
+let userPosition = window.scrollY;
+
+const burgerToggler = () => {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+    menu.classList.toggle('is-hidden-mobile');
+
+    if(menu.classList.contains('is-active') & isMobile){
+        disableScroll()
+    }else{
+        enableScroll()
+    }
+}
+burger.addEventListener('click', burgerToggler);
 

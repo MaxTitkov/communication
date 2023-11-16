@@ -57,7 +57,38 @@ ul.action-list>li{
 }
 
 @media screen and (max-width: 992px) {
-    .menu {
+    /* .menu {
       display: none!important;
+    } */
+    .container{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .columns{
+        width: 99%;
+        margin-top: 40px!important;
+    }
+    .menu {
+        position: fixed!important;
+        top: 0px!important;
+        right: 0px!important;
+        bottom: 0px!important;
+        left: 0px!important;
+        height: 100vh!important;
+        width: 100vh!important;
+        /* background-color: rgba(231, 231, 231, 1)!important; */
+      }
+      .burger{
+        z-index: 100;
+        background-color: black;
+      }
+      .navbar-burger:hover {
+        background-color: transparent!important;
+      }
+  }
+
+@media (max-width: 480px) {
+    .media {
+      flex-direction: column;
     }
   }

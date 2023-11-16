@@ -30,14 +30,14 @@ window.addEventListener('scroll', () => {
     // Get the current scroll position
     const scrollPosition = window.scrollY;
 
-    if(!isMobile){
-        if(scrollPosition >= 4655){
-            menu.scrollTo({ top: menu.scrollHeight, behavior: "smooth" });
-        }
-        if(scrollPosition <= 2667){
-            menu.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    }
+    // if(!isMobile){
+    //     if(scrollPosition >= 4655){
+    //         menu.scrollTo({ top: menu.scrollHeight, behavior: "smooth" });
+    //     }
+    //     if(scrollPosition <= 2667){
+    //         menu.scrollTo({ top: 0, behavior: "smooth" });
+    //     }
+    // }
 
   
     // Determine the active section

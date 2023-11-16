@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("src/Roboto/Roboto-Regular.ttf") format("truetype");
+  }
+@font-face {
+	font-family: "MainFont";
+	src: url("src/Golos_Text/GolosText-VariableFont_wght.ttf") format("truetype");
+  }
+
+.container{
+    font-family: "MainFont", sans-serif;
+    padding-top: 61px!important;
+}
+
 .part{
     margin-bottom: 30px;
 }
@@ -40,6 +54,7 @@ ul.action-list>li{
     padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
     box-sizing: content-box; /* So the width will be 100% + 17px */
     padding-top: 65px;
+    font-family: "Roboto", sans-serif;
   }
 
 .menu::-webkit-scrollbar {
@@ -55,6 +70,9 @@ ul.action-list>li{
 .red{
     background-color: rgb(255, 214, 204);
 }
+.mark{
+    background-color: rgb(255, 236, 126);
+}
 
 @media screen and (max-width: 992px) {
     /* .menu {
@@ -66,7 +84,7 @@ ul.action-list>li{
     }
     .columns{
         width: 99%;
-        margin-top: 40px!important;
+        padding-top: 10px!important;
     }
     .menu {
         position: fixed!important;

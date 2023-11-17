@@ -6,6 +6,28 @@
 	font-family: "MainFont";
 	src: url("src/Golos_Text/GolosText-VariableFont_wght.ttf") format("truetype");
   }
+  @font-face {
+    font-family: "LogoFont";
+    src: url("src/DM_Serif_Display/DMSerifDisplay-Regular.ttf") format("truetype");
+    }
+
+.navbar-brand{
+  background-color: bisque;
+}
+
+.logo, .logo-small{
+  font-family: "LogoFont", sans-serif;
+  color: #000;
+}
+.logo{
+  font-size: 30px;
+  margin-bottom: -5px!important;
+}
+.logo-small{
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: -2px;
+}
 
 .container{
     font-family: "MainFont", sans-serif;

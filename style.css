@@ -12,6 +12,11 @@
     padding-top: 61px!important;
 }
 
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
 .part{
     margin-bottom: 30px;
 }
@@ -39,6 +44,9 @@ ul.action-list>li::marker{
 
 ul.action-list>li{
     margin-left: 20px;
+}
+ul.action-list > li{
+  margin-bottom: 2px;
 }
 /* The sidebar menu */
 .menu {
@@ -75,7 +83,7 @@ ul.action-list>li{
     text-decoration: underline;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
     /* .menu {
       display: none!important;
     } */
@@ -111,3 +119,13 @@ ul.action-list>li{
       flex-direction: column;
     }
   }
+
+.progress-bar{
+  position: fixed!important;
+  top: 98vh!important;
+  right: 0px!important;
+  bottom: 0px!important;
+  left: 0px!important;
+  /* height: 100vh!important; */
+  width: 100%!important;
+}

@@ -25,16 +25,17 @@ menuItems.forEach((menuItem) => {
     })
 
 })
+
 // Add scroll event listener
 window.addEventListener('scroll', () => {
     // Get the current scroll position
     const scrollPosition = window.scrollY;
 
     // if(!isMobile){
-    //     if(scrollPosition >= 4655){
+    //     if(scrollPosition > 4655){
     //         menu.scrollTo({ top: menu.scrollHeight, behavior: "smooth" });
     //     }
-    //     if(scrollPosition <= 2667){
+    //     if(scrollPosition < 2667){
     //         menu.scrollTo({ top: 0, behavior: "smooth" });
     //     }
     // }
@@ -66,6 +67,7 @@ window.addEventListener('scroll', () => {
         const activeMenuItemIndex = menuItemsArray.indexOf(menuItem);
 
         const indexOfInactive = -(menuItemsArray.length - activeMenuItemIndex)+1
+
         menuItemsArray.slice(indexOfInactive).forEach((item) => {
             item.classList.remove('is-active');
         })
@@ -109,3 +111,17 @@ const burgerToggler = () => {
 }
 burger.addEventListener('click', burgerToggler);
 
+
+// progressBar
+if(isMobile){
+    const barContainer = document.querySelector("#progressBar");
+    const progressBar = document.querySelector("#bar");
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / height) * 100;
+    progressBar.value=scrolled;
+    window.addEventListener('scroll', () => {
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / height) * 100;
+        progressBar.value=scrolled;
+    })
+}
